@@ -15,8 +15,8 @@
 	<int:channel id="outputChannel" />
 	<int-http:inbound-gateway
 		request-channel="requestChannel" reply-channel="outputChannel"
-		supported-methods="GET" path="/welcome/{name}"
-		payload-expression="#pathVariables.name">
+		supported-methods="GET" path="/welcome/{option}"
+		payload-expression="#pathVariables.option">
 		<int-http:request-mapping
 			consumes="application/json" produces="application/json" />
 	</int-http:inbound-gateway>
